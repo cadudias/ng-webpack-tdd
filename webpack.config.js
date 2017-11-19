@@ -172,6 +172,14 @@ module.exports = function makeWebpackConfig() {
 
   // Skip rendering index.html in test mode
   if (!isTest) {
+    config.plugins.push(    
+      new webpack.ProvidePlugin({
+          $: 'jquery',
+          jQuery: 'jquery',
+          'window.jQuery': 'jquery',
+          Popper: ['popper.js', 'default']
+    }))
+
     // Reference: https://github.com/ampedandwired/html-webpack-plugin
     // Render index.html
     config.plugins.push(

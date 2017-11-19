@@ -1,6 +1,10 @@
 import angular from 'angular';
 
+import "bootstrap"
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/app.css';
+import './user.service'
 
 let app = () => {
   return {
